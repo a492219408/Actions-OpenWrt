@@ -18,8 +18,9 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: v23.05.5
-  FEEDS_CONF: feeds.conf.default
+  REPO_BRANCH: v24.10.2
+  FEEDS_CONF: feeds.conf
+  OFFICIAL_FEEDS_VERSION: ;openwrt-24.10
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
