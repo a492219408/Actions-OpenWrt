@@ -91,10 +91,7 @@ jobs:
         set -eux
         RUST_MK="openwrt/feeds/packages/lang/rust/Makefile"
         if [ -f "$RUST_MK" ]; then
-          # CI 必须不是 true；默认改成 if-unchanged
-          sed -i 's/llvm.download-ci-llvm=true/llvm.download-ci-llvm=if-unchanged/' "$RUST_MK"
-          # 如果你想最稳当（不依赖 CI 产物），可以强制改为 false：
-          # sed -i 's/llvm.download-ci-llvm=[^ ]*/llvm.download-ci-llvm=false/' "$RUST_MK"
+           sed -i 's/llvm.download-ci-llvm=[^ ]*/llvm.download-ci-llvm=false/' "$RUST_MK"
         fi
 
     - name: Load custom configuration
