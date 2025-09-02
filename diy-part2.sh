@@ -21,7 +21,7 @@
 
 # OpenWrt 24.10 可能 会404，需要本地编译LLVM
 # 热补丁 OpenWrt 的 rust 配方，避免从 CI 拉 LLVM（会改为本地构建 LLVM）
-RUST_MK="feeds/packages/lang/rust/Makefile"
-if grep -q 'llvm.download-ci-llvm=true' "$RUST_MK"; then
-  sed -i 's/llvm.download-ci-llvm=true/llvm.download-ci-llvm=false/' "$RUST_MK"
-fi
+#RUST_MK="feeds/packages/lang/rust/Makefile"
+#if grep -q 'llvm.download-ci-llvm=true' "$RUST_MK"; then
+#  sed -i 's/llvm.download-ci-llvm=true/llvm.download-ci-llvm=false/' "$RUST_MK"
+#fi
