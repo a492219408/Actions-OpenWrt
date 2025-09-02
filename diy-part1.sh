@@ -14,7 +14,11 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf
+#sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf
+sed -i '$a src-git vernesong https://github.com/vernesong/OpenClash' feeds.conf
+sed -i '$a src-git sundaqiang https://github.com/sundaqiang/openwrt-packages' feeds.conf
+sed -i '$a src-git brvphoenix https://github.com/brvphoenix/luci-app-wrtbwmon' feeds.conf
+sed -i '$a src-git jerrykuku https://github.com/jerrykuku/luci-theme-argon' feeds.conf
 
 ## 如果设置了 OFFICIAL_FEEDS_VERSION，就重写官方四个 feed
 ## 例如：OFFICIAL_FEEDS_VERSION=';openwrt-24.10' 或 '^b5ed85f...'
